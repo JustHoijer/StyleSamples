@@ -6,7 +6,7 @@
 
 main {
     min-height: 100vh;
-    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    background: linear-gradient(to right top, #6cdbeb, #7070cc);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,13 +14,79 @@ main {
 
 .glass {
     background: white;
-    min-height: 80vh;
-    width: 10%;
-    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    min-height: 85vh;
+    width: 75%;
+    padding: 5vh;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
     border: white;
-    border-radius: 50rem;
+    border-radius: 2rem;
     z-index: 5;
-    backdrop-filter: blur(1000rem)
+    backdrop-filter: blur(2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard,
+.dashboard2 {
+    background: white;
+    min-height: 60vh;
+    width: 30%;
+    padding: 10vh;
+    border: white;
+    border-radius: 2rem;
+    z-index: 5;
+    backdrop-filter: blur(20rem);
+    overflow: hidden;
+
+    &:after {
+        content: '';
+        top: 0;
+        transform: translateX(100%) rotate(30deg);
+        width: 300%;
+        height: 300%;
+        position: absolute;
+        z-index: 1;
+        animation: shine 3s infinite ease-in;
+        background:
+            linear-gradient(to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.8) 50%,
+                rgba(128, 186, 232, 0) 99%,
+                rgba(128, 186, 232, 0) 100%);
+    }
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(30deg);
+    }
+
+    80% {
+        transform: translateX(-100%) translateY(-100%) rotate(30deg);
+    }
+
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(30deg);
+    }
+}
+
+.dashboard {
+    background: linear-gradient(to bottom, #c39738, #deb761, #c39738);
+
+
+
+    &:after {
+        animation-delay: 1s;
+    }
+}
+
+.dashboard2 {
+    background: linear-gradient(to bottom, #d5d7e5, #eee, #d5d7e5);
+
+    &:after {
+        animation-delay: 2s;
+    }
 }
 
 .circle1,
@@ -28,8 +94,8 @@ main {
     background: white;
     background: linear-gradient(to right bottom,
             rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
-    height: 20rem;
-    width: 20rem;
+    height: 6rem;
+    width: 6rem;
     position: absolute;
     z-index: 3;
     border-radius: 50%;
@@ -37,12 +103,12 @@ main {
 }
 
 .circle1 {
-    top: 50%;
-    left: 8%;
+    top: 5%;
+    left: 3%;
 }
 
 .circle2 {
-    bottom: 50%;
-    right: 5%;
+    bottom: 23%;
+    right: 10.5%;
     z-index: 3;
 }
