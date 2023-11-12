@@ -16,7 +16,7 @@ main {
     background: white;
     min-height: 85vh;
     width: 75%;
-    padding: 5vh;
+    padding: 10vh, 10vh, 10vh;
     background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
     border: white;
     border-radius: 2rem;
@@ -25,19 +25,23 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .dashboard,
 .dashboard2 {
     background: white;
     min-height: 60vh;
-    width: 30%;
-    padding: 10vh;
+    width: 50vh;
     border: white;
-    border-radius: 2rem;
+    border-radius: 6rem;
     z-index: 5;
     backdrop-filter: blur(20rem);
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:after {
         content: '';
@@ -73,7 +77,6 @@ main {
 
 .dashboard {
     background: linear-gradient(to bottom, #c39738, #deb761, #c39738);
-
 
 
     &:after {
