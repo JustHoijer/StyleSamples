@@ -43,6 +43,8 @@ main {
     align-items: center;
     justify-content: center;
 
+
+
     &:after {
         content: '';
         top: 0;
@@ -87,9 +89,22 @@ main {
 .dashboard2 {
     background: linear-gradient(to bottom, #d5d7e5, #eee, #d5d7e5);
 
+
+
     &:after {
         animation-delay: 2s;
     }
+}
+
+.Card1,
+.Card2 {
+    border: solid;
+    min-height: 55vh;
+    width: 45vh;
+    display: grid;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
 }
 
 .circle1,
